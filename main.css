@@ -107,18 +107,18 @@ input#search {
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    #96ab50;
+    color:    #758e1a;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:    #96ab50;
+    color:    #758e1a;
     opacity:  1;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:    #96ab50;
+    color:    #758e1a;
     opacity:  1;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color:    #96ab50;
+    color:    #758e1a;
 }
 
 /*Still need to build out hover and click (interaction) css.*/
@@ -194,7 +194,7 @@ a.active.item.green {
 }
 
 .book-wrapper img{
-    height: 450px;
+    width: 100%;
 }
 
 .book-wrapper{
@@ -203,7 +203,6 @@ a.active.item.green {
     background-color: #fff;
     margin: 1em 0;
     display: flex;
-    justify-content: space-between;
 }
 
 .book-text-wrapper {
@@ -212,6 +211,8 @@ a.active.item.green {
 
 .book-under-the-title{
     font-weight: 300;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     justify-content: flex-start;
     padding: 1.2em 0 1em 0;
@@ -250,6 +251,20 @@ a.active.item.green {
     border-right: 1px solid #eee;
 }
 
+.img-book-bg {
+    width: 820px;
+
+}
+
+.img-book-bg.book-1{
+    background: url("images/book_1.png");
+    background-size: cover;
+}
+
+.img-book-bg.book-2 {
+    background: url("images/book_2.jpg") no-repeat right;
+    background-size: cover;
+}
 
 /*FOOTER*/
 
