@@ -10,7 +10,7 @@ body {
     max-width:1598px;
     margin: 0 auto;
     font-size: 12px;
-    font-family:"Roboto", sans-serif;
+    font-family:"Roboto", "Helvetica", sans-serif;
 }
 
 
@@ -37,7 +37,7 @@ header {
 }
 
 .header-wrapper-content {
-    width: 670px;
+    width: 675px;
     margin: 0 auto;
     padding: 3.5em 0;
 }
@@ -58,7 +58,7 @@ header {
     font-size: 2.2em;
     color: rgba(255,255,255,.8);
     font-weight: 200;
-    font-family: "Roboto Slab", sans-serif;
+    font-family: "Roboto Slab", "Helvetica", sans-serif;
 }
 
 .header-title>b {
@@ -68,7 +68,7 @@ header {
 
 .header-subtitle {
     color: #7c9913;
-    font-family:"Roboto", sans-serif;
+    font-family:"Roboto", "Helvetica", sans-serif;
     font-weight:400;
     font-size:1rem;
     margin-top: 3px;
@@ -203,6 +203,7 @@ a.active.item.green {
     background-color: #fff;
     margin: 1em 0;
     display: flex;
+    border-radius: 3px;
 }
 
 .book-text-wrapper {
@@ -252,18 +253,80 @@ a.active.item.green {
 }
 
 .img-book-bg {
-    width: 820px;
+    width: 850px;
 
 }
 
 .img-book-bg.book-1{
     background: url("images/book_1.png");
     background-size: cover;
+    border-radius: 3px;
 }
 
 .img-book-bg.book-2 {
-    background: url("images/book_2.jpg") no-repeat right;
+    background: url("images/book_2.jpg");
     background-size: cover;
+}
+
+.book-buttons-wrapper {
+    display:flex;
+    justify-content: space-between;
+    padding: 2em 0;
+}
+
+.left-buttons {
+    display:flex;
+    justify-content: flex-start;
+}
+
+.left-buttons > div {
+    margin-right: 2em;
+}
+
+.logo-book > div{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo-buy-book, .book-price {
+    box-sizing: border-box;
+    height: 43px;
+}
+
+.logo-buy-book {
+    width: 150px;
+    background: url("images/Gumroad_Wordmark_Full.jpg") #fff no-repeat center;
+    background-size: contain;
+    border-radius: 3px;
+}
+
+.gumroad-logo::before{
+    content: "";
+    border-top-left-radius: 3px;
+    background : linear-gradient(
+            to right,
+            #e8a023,
+            #e8a023 25px,
+            #e26952 25px,
+            #e26952 75px,
+            #c03648 75px,
+            #c03648 125px,
+            #8d2723 125px
+    );
+    height: 4px;
+    display: block;
+}
+
+.book-price {
+    background-color: #fff;
+    margin-left: -4px;
+    padding: 13px 15px;
+    font-size: 1.4em;
+    font-weight: 300;
+    color: #9dc32b;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: 1px solid #ede7e1;
 }
 
 /*FOOTER*/
