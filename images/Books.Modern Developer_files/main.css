@@ -254,11 +254,11 @@ a.active.item.green {
 }
 
 .book-text-sections .text-section-column-2 {
-    width: 36%;
-    padding-left: 2em;
+    padding: 0 2em;
 }
 
 .text-section-column-2 > div {
+    width: 100%;
     padding-top: 0.5em;
     padding-bottom: 0.2em;
     border-bottom: 1px solid #ede7e1;
