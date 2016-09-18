@@ -278,8 +278,16 @@ a.active.item.green {
     border-bottom: none;
 }
 
+.bookmark-button {
+    text-align: center;
+    color: #858683;
+    font-size: 1.1em;
+    font-weight: 300;
+}
 
-
+.bookmark-button i {
+    margin-bottom: 5px;
+}
 
 .img-book-bg {
     position: relative;
@@ -291,11 +299,10 @@ a.active.item.green {
     width: 331px;
 }
 
-
 .book-buttons-wrapper {
     display:flex;
     justify-content: space-between;
-    padding: 2em 0;
+    padding: 1.5em 0 6em;
 }
 
 .left-buttons {
