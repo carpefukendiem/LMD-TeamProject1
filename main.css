@@ -306,11 +306,19 @@ a.active.item.green {
     height: 43px;
 }
 
+.gumroad-logo {
+    background: url("images/Gumroad_Wordmark_Full.jpg") #fff no-repeat center;
+
+}
+
+.amazon-logo {
+    background: url("images/amazon_logo.jpg") #fff no-repeat center;
+}
+
 .logo-buy-book {
     width: 150px;
-    background: url("images/Gumroad_Wordmark_Full.jpg") #fff no-repeat center;
     background-size: contain;
-    border-radius: 3px;
+    border-radius: 4px;
 }
 
 .gumroad-logo::before{
