@@ -333,6 +333,19 @@ a.active.item.green {
     background: url("images/amazon_logo.jpg") #fff no-repeat center;
 }
 
+.manning-logo {
+    text-align: center;
+    background-color: #000;
+    color: #8f8f8f;
+    padding: 6px;
+    font-family: Arial, sans-serif;
+}
+
+.manning {
+    color: #a4c838;
+    font-size: 1.2em;
+}
+
 .logo-buy-book {
     width: 150px;
     background-size: contain;
@@ -521,6 +534,74 @@ p[data-value]:after {
     position: absolute; right:0;
 }
 
+
+.book-wrapper.overlay {
+    position: relative;
+}
+
+.book-wrapper.overlay:after {
+    content: " ";
+    z-index: 1;
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(224,224,224, 0.7) ;
+}
+
+.slide-tab {
+    width: 60%;
+    position: absolute;
+    height: 450px;
+    background-color: #fff;
+    right: 0;
+    z-index: 10;
+    border: 5px solid #cbe9e7;
+    box-sizing: border-box;
+    padding: 2em 3em;
+
+}
+
+.search-inside-book {
+    margin: 1em auto;
+    padding: 0.7em;
+    border: 1px solid #d8d8d8;
+    width: 100%;
+    border-radius: 4px;
+}
+
+input.search-inside-book{
+    font-size: 1.5em;
+    color: #000;
+    font-weight: 300;
+    font-family: Roboto, sans-serif;
+}
+
+.search-results {
+    padding-right: 1em;
+    height: 75%;
+    overflow: auto;
+}
+
+.tab-pills {
+    position: absolute;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tab-pills > div {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    white-space:nowrap;
+    text-align: center;
+    font-size: 1em;
+    width: 20%;
+}
 
 /*FOOTER*/
 
