@@ -17,6 +17,7 @@ body {
     border: 1px solid #eee;
     padding: 5px 10px;
     border-radius: 3px;
+    cursor: pointer;
 }
 
 .green-contour{
@@ -109,21 +110,37 @@ input#search {
     border-top-left-radius: 3px;
 }
 
-::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+#search::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color:    #758e1a;
 }
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:    #758e1a;
-    opacity:  1;
-}
-::-moz-placeholder { /* Mozilla Firefox 19+ */
+#search:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
     color:    #758e1a;
     opacity:  1;
 }
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
+#search::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #758e1a;
+    opacity:  1;
+}
+#search:-ms-input-placeholder { /* Internet Explorer 10-11 */
     color:    #758e1a;
 }
 
+
+
+.search-inside-book::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #5a5a5a;
+}
+.search-inside-book:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #5a5a5a;
+    opacity:  1;
+}
+.search-inside-book::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #5a5a5a;
+    opacity:  1;
+}
+.search-inside-book:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    #5a5a5a;
+}
 /*Still need to build out hover and click (interaction) css.*/
 
 
@@ -272,6 +289,7 @@ a.active.item.green {
     padding-bottom: 0.2em;
     border-bottom: 1px solid #ede7e1;
     color: #3183c9;
+    cursor: pointer;
 }
 
 .accordion-bonus > div:last-child{
@@ -283,6 +301,7 @@ a.active.item.green {
     color: #858683;
     font-size: 1.1em;
     font-weight: 300;
+    cursor: pointer;
 }
 
 .bookmark-button i {
@@ -297,6 +316,10 @@ a.active.item.green {
     background-repeat:   no-repeat;
     background-size:     cover;
     width: 331px;
+}
+
+.book-3 {
+    border-left: 2px solid #eee;
 }
 
 .book-buttons-wrapper {
@@ -350,6 +373,7 @@ a.active.item.green {
     width: 150px;
     background-size: contain;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .gumroad-logo::before{
@@ -388,6 +412,18 @@ a.active.item.green {
 
 .book-progress-bars > div {
     margin-bottom: 10px;
+}
+
+.download-book {
+    padding: 12px;
+    text-align: center;
+    width: 300px;
+    color: #fff;
+    background-color: #98c400;
+    border-radius: 3px;
+    font-size: 1.3em;
+    font-weight: 300;
+    cursor: pointer;
 }
 
 .progress-label {
@@ -561,14 +597,13 @@ p[data-value]:after {
     border: 5px solid #cbe9e7;
     box-sizing: border-box;
     padding: 2em 3em;
-
 }
 
 .search-inside-book {
     margin: 1em auto;
     padding: 0.7em;
     border: 1px solid #d8d8d8;
-    width: 100%;
+    width: 97%;
     border-radius: 4px;
 }
 
@@ -583,13 +618,34 @@ input.search-inside-book{
     padding-right: 1em;
     height: 75%;
     overflow: auto;
+    font-weight: 300;
+}
+.search-results table {
+    width: 100%;
+    font-size: 1.3em;
+    table-layout : fixed;
+}
+
+.search-results tr td:nth-child(2) {
+    text-align: right;
+    padding: 0 25px;
+}
+
+.search-results td {
+    padding: 0.35em 0;
+    overflow: hidden;
+}
+
+.highlight-search {
+    background-color: #d5edd2;
+    padding: 2px 0;
 }
 
 .tab-pills {
     position: absolute;
     right: -38px;
     bottom: 0;
-
+    cursor: pointer;
 }
 .tab-pills table, tr, td, th {
     position: relative;
@@ -619,12 +675,21 @@ input.search-inside-book{
     background-color: #cbe9e7;
 }
 
-
 .tab-pills th {
     padding: 10px;
     font-weight: 300;
     font-size: 20px;
     color: #494949;
+}
+
+.load-more-books {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: 200;
+    cursor: pointer;
+    color: #d6d6d6;
+    margin-bottom: 25em;
 }
 
 /*FOOTER*/
