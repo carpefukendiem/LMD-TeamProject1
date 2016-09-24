@@ -154,6 +154,7 @@ button.icon {
     margin-top: 2px;
     border-bottom-right-radius: 3px;
     border-top-right-radius: 3px;
+    cursor: pointer;
 }
 
 i[class*=fa-search]::before {
