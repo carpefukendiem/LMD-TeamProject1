@@ -183,6 +183,14 @@ i[class*=fa-search]::before {
     text-align: center;
 }
 
+.main-nav a:hover {
+    color: #9dc32b;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
 
 a.active.item.green {
     color: #9dc32b;
