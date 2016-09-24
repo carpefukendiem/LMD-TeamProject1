@@ -434,6 +434,18 @@ a.active.item.green {
     cursor: pointer;
 }
 
+.download-book:hover {
+    background-color: #d5edd2;
+    color: #7c9913;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+
+}
+
+
 .progress-label {
     padding-left: 7px;
     margin-right: 5px;
