@@ -2,7 +2,8 @@
 
 ##Team: Fierce-Killer-Whale (Lena Faure and Ruben Ruiz)
 
-Lena Faure and Ruben Ruiz join forces to create Team Fierce-Killer-Whale. Team project 1 is to build out Books.Modern Developer UI based on a mockup provided by the Modern Developer team, and Team project 2 is to write Encyclopedia entries for Encyclopedia.ModernDeveloper.com
+Lena Faure and Ruben Ruiz join forces to create Team Fierce-Killer-Whale.
+Team project 1 is to build out Books.Modern Developer UI based on a mockup provided by the Modern Developer team, and Team project 2 is to write Encyclopedia entries for Encyclopedia.ModernDeveloper.com
 
 
 ##Workflow and workload
