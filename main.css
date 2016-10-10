@@ -7,10 +7,9 @@
 
 body {
     background-color: #fff;
-    max-width:1598px;
     margin: 0 auto;
     font-size: 12px;
-    font-family:"Roboto", sans-serif;
+    font-family:"Roboto", "Helvetica", sans-serif;
 }
 
 
@@ -18,11 +17,16 @@ body {
     border: 1px solid #eee;
     padding: 5px 10px;
     border-radius: 3px;
+    cursor: pointer;
 }
 
 .green-contour{
     border-color: #9dc32b;
     color: #9dc32b;
+}
+
+.span-align-right {
+    float: right;
 }
 
 /*
@@ -37,7 +41,7 @@ header {
 }
 
 .header-wrapper-content {
-    width: 670px;
+    width: 675px;
     margin: 0 auto;
     padding: 3.5em 0;
 }
@@ -58,7 +62,7 @@ header {
     font-size: 2.2em;
     color: rgba(255,255,255,.8);
     font-weight: 200;
-    font-family: "Roboto Slab", sans-serif;
+    font-family: "Roboto Slab", "Helvetica", sans-serif;
 }
 
 .header-title>b {
@@ -68,7 +72,7 @@ header {
 
 .header-subtitle {
     color: #7c9913;
-    font-family:"Roboto", sans-serif;
+    font-family:"Roboto", "Helvetica", sans-serif;
     font-weight:400;
     font-size:1rem;
     margin-top: 3px;
@@ -106,21 +110,37 @@ input#search {
     border-top-left-radius: 3px;
 }
 
-::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    #96ab50;
+#search::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #758e1a;
 }
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:    #96ab50;
+#search:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #758e1a;
     opacity:  1;
 }
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:    #96ab50;
+#search::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #758e1a;
     opacity:  1;
 }
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color:    #96ab50;
+#search:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    #758e1a;
 }
 
+
+
+.search-inside-book::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #5a5a5a;
+}
+.search-inside-book:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #5a5a5a;
+    opacity:  1;
+}
+.search-inside-book::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #5a5a5a;
+    opacity:  1;
+}
+.search-inside-book:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    #5a5a5a;
+}
 /*Still need to build out hover and click (interaction) css.*/
 
 
@@ -134,6 +154,7 @@ button.icon {
     margin-top: 2px;
     border-bottom-right-radius: 3px;
     border-top-right-radius: 3px;
+    cursor: pointer;
 }
 
 i[class*=fa-search]::before {
@@ -163,6 +184,14 @@ i[class*=fa-search]::before {
     text-align: center;
 }
 
+.main-nav a:hover {
+    color: #9dc32b;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
 
 a.active.item.green {
     color: #9dc32b;
@@ -194,7 +223,7 @@ a.active.item.green {
 }
 
 .book-wrapper img{
-    height: 450px;
+    width: 100%;
 }
 
 .book-wrapper{
@@ -203,7 +232,7 @@ a.active.item.green {
     background-color: #fff;
     margin: 1em 0;
     display: flex;
-    justify-content: space-between;
+    border-radius: 3px;
 }
 
 .book-text-wrapper {
@@ -212,6 +241,8 @@ a.active.item.green {
 
 .book-under-the-title{
     font-weight: 300;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     justify-content: flex-start;
     padding: 1.2em 0 1em 0;
@@ -231,25 +262,495 @@ a.active.item.green {
 }
 
 .book-text-sections {
-    padding: 2em 0;
+    padding: 1.8em 0;
     display: flex;
     font-size: 1.3em;
     color: #3c3c3c;
     line-height: 1.5em;
     font-weight: 300;
+
 }
 
 .book-text-sections div p {
     padding-bottom: 1em;
 }
 
-.book-text-sections div:nth-child(1) {
-    width: 55%;
+.book-text-sections .text-section-column-1 {
+    width: 416px;
     height: 100%;
     padding-right: 2em;
+    padding-top: 0.5em;
     border-right: 1px solid #eee;
 }
 
+.book-text-sections .text-section-column-2 {
+    width: 280px;
+    padding-left: 1.7em;
+    padding-top: 0.5em;
+}
+
+.accordion-bonus {
+    padding-top: 1.5em;
+}
+
+.accordion-bonus > div {
+    padding-top: 0.5em;
+    padding-bottom: 0.2em;
+    border-bottom: 1px solid #ede7e1;
+    color: #3183c9;
+    cursor: pointer;
+}
+
+.accordion-bonus > div:last-child{
+    border-bottom: none;
+}
+
+.bookmark-button {
+    text-align: center;
+    color: #858683;
+    font-size: 1.1em;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.bookmark-button i {
+    margin-bottom: 5px;
+}
+
+.img-book-bg {
+    position: relative;
+    float: left;
+    height: 100%;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+    width: 331px;
+}
+
+.book-3 {
+    border-left: 1px solid #eee;
+}
+
+.book-buttons-wrapper {
+    display:flex;
+    justify-content: space-between;
+    padding: 1.5em 0 6em;
+}
+
+.left-buttons {
+    display:flex;
+    justify-content: flex-start;
+}
+
+.left-buttons > div {
+    margin-right: 2em;
+}
+
+.logo-book > div{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo-buy-book, .book-price {
+    box-sizing: border-box;
+    height: 43px;
+}
+
+.gumroad-logo {
+    background: url("images/Gumroad_Wordmark_Full.jpg") #fff no-repeat center;
+
+}
+
+.amazon-logo {
+    background: url("images/amazon_logo.jpg") #fff no-repeat center;
+}
+
+.manning-logo {
+    text-align: center;
+    background-color: #000;
+    color: #8f8f8f;
+    padding: 6px;
+    font-family: Arial, sans-serif;
+}
+
+.manning {
+    color: #a4c838;
+    font-size: 1.2em;
+}
+
+.logo-buy-book {
+    width: 150px;
+    background-size: contain;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.gumroad-logo::before{
+    content: "";
+    border-top-left-radius: 3px;
+    background : linear-gradient(
+            to right,
+            #e8a023,
+            #e8a023 25px,
+            #e26952 25px,
+            #e26952 75px,
+            #c03648 75px,
+            #c03648 125px,
+            #8d2723 125px
+    );
+    height: 4px;
+    display: block;
+}
+
+.book-price {
+    background-color: #fff;
+    margin-left: -4px;
+    padding: 13px 15px;
+    font-size: 1.4em;
+    font-weight: 300;
+    color: #9dc32b;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: 1px solid #ede7e1;
+}
+
+.book-progress-bars {
+    line-height: 1.2em;
+    font-size: 0.9em;
+}
+
+.book-progress-bars > div {
+    margin-bottom: 10px;
+}
+
+.download-book {
+    padding: 12px;
+    text-align: center;
+    width: 300px;
+    color: #fff;
+    background-color: #98c400;
+    border-radius: 3px;
+    font-size: 1.3em;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.download-book:hover {
+    background-color: #d5edd2;
+    color: #7c9913;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+
+}
+
+
+.progress-label {
+    padding-left: 7px;
+    margin-right: 5px;
+}
+
+.ratings-bubble {
+    position: absolute;
+    text-align: center;
+    padding: 4px 5px;
+    width: 12px;
+    font-size: 0.7em;
+    bottom: 20px;
+    line-height: 1em;
+    border-radius: 3px;
+}
+
+.ratings-bubble:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 16px;
+    border: 3px solid;
+}
+
+.easy-to-follow .ratings-bubble {
+    background-color:#fdd978;
+    color: #c3920f;
+}
+
+.easy-to-follow .ratings-bubble:before {
+    border-color: #fdd978 transparent transparent #fdd978;
+}
+
+.easy-to-follow {
+    color: #f7be26;
+    position: relative;
+}
+
+.easy-to-follow progress::-webkit-progress-value  {
+    /* Gradient background with Stripes */
+    background-color: #f7be26;
+}
+
+.easy-to-follow progress[value]::-moz-progress-bar {
+    background: #f7be26;
+    border-radius: 2px;
+}
+
+.comprehensive .ratings-bubble {
+    background-color:#abd8a5;
+    color: #4f9546;
+}
+
+.comprehensive .ratings-bubble:before {
+    border-color: #abd8a5 transparent transparent #abd8a5;
+}
+
+.comprehensive {
+    color: #75c36a;
+    position: relative;
+}
+
+.comprehensive progress::-webkit-progress-value  {
+    /* Gradient background with Stripes */
+    background-color: #75c36a;
+}
+
+.comprehensive progress[value]::-moz-progress-bar {
+    background: #75c36a;
+    border-radius: 2px;
+}
+
+.enough-examples .ratings-bubble {
+    background-color: #9ad6e8;
+    color: #1a8aa4;
+}
+
+.enough-examples .ratings-bubble:before {
+    border-color: #9ad6e8 transparent transparent #9ad6e8;
+}
+
+.enough-examples {
+    color: #5ac9e3;
+    position: relative;
+}
+
+.enough-examples progress::-webkit-progress-value  {
+    /* Gradient background with Stripes */
+    background-color: #5ac9e3;
+}
+
+.enough-examples progress[value]::-moz-progress-bar {
+    background: #5ac9e3;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+    background-color: #eee;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar
+{
+    width: 6px;
+    background-color: #b7b7b7;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    background-color: #b7b7b7;
+    border-radius: 10px;
+}
+
+/* Progress bar */
+
+progress[value] {
+    /* Get rid of the default appearance */
+    appearance: none;
+
+    /* This unfortunately leaves a trail of border behind in Firefox and Opera. We can remove that by setting the border to none. */
+    border: none;
+
+    /* Add dimensions */
+    width: 100%; height: 4px;
+
+    /* Although firefox doesn't provide any additional pseudo class to style the progress element container, any style applied here works on the container. */
+    background-color: whiteSmoke;
+    border-radius: 3px;
+
+    /* Of all IE, only IE10 supports progress element that too partially. It only allows to change the background-color of the progress value using the 'color' attribute. */
+    color: royalblue;
+
+    position: relative;
+    margin: 0 0 0.5em;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: whiteSmoke;
+    border-radius: 3px;
+}
+
+progress[value]::-webkit-progress-value {
+    position: relative;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+    border-radius:3px;
+}
+
+progress[value]::-webkit-progress-value:after {
+    /* Only webkit/blink browsers understand pseudo elements on pseudo classes. A rare phenomenon! */
+    content: '';
+    position: absolute;
+
+    width:5px; height:5px;
+    top:7px; right:7px;
+
+    background-color: white;
+    border-radius: 100%;
+}
+
+
+.comprehensive progress[value]::-moz-progress-bar {
+    background: #75c36a;
+    border-radius: 2px;
+}
+
+p[data-value] {
+
+    position: relative;
+}
+
+/* The percentage will automatically fall in place as soon as we make the width fluid. Now making widths fluid. */
+
+p[data-value]:after {
+    content: attr(data-value) '%';
+    position: absolute; right:0;
+}
+
+
+.book-wrapper.overlay {
+    position: relative;
+}
+
+.book-wrapper.overlay:after {
+    content: " ";
+    z-index: 1;
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(224,224,224, 0.7) ;
+}
+
+.slide-tab {
+    width: 60%;
+    position: absolute;
+    height: 450px;
+    background-color: #fff;
+    right: 0;
+    z-index: 10;
+    border: 5px solid #cbe9e7;
+    box-sizing: border-box;
+    padding: 2em 3em;
+}
+
+.search-inside-book {
+    margin: 1em auto;
+    padding: 0.7em;
+    border: 1px solid #d8d8d8;
+    width: 97%;
+    border-radius: 4px;
+}
+
+input.search-inside-book{
+    font-size: 1.5em;
+    color: #000;
+    font-weight: 300;
+    font-family: Roboto, sans-serif;
+}
+
+.search-results {
+    padding-right: 1em;
+    height: 75%;
+    overflow: auto;
+    font-weight: 300;
+}
+.search-results table {
+    width: 100%;
+    font-size: 1.3em;
+    table-layout : fixed;
+}
+
+.search-results tr td:nth-child(2) {
+    text-align: right;
+    padding: 0 25px;
+}
+
+.search-results td {
+    padding: 0.35em 0;
+    overflow: hidden;
+}
+
+.highlight-search {
+    background-color: #d5edd2;
+    padding: 2px 0;
+}
+
+.tab-pills {
+    position: absolute;
+    right: -38px;
+    bottom: 0;
+    cursor: pointer;
+}
+.tab-pills table, tr, td, th {
+    position: relative;
+}
+
+.tab-pills td span {
+    -moz-transform: translateX(-50%) translateY(430%) rotate(90deg);
+    -webkit-transform: translateX(-50%) translateY(430%) rotate(90deg);
+    transform:  translateX(-50%) translateY(430%) rotate(90deg);
+    white-space: nowrap;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    text-align: center;
+}
+
+.tab-pills td {
+    height: 113px;
+    padding: 10px 18px;
+    color: #39b2d0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.tab-pills td.active{
+    background-color: #cbe9e7;
+}
+
+.tab-pills th {
+    padding: 10px;
+    font-weight: 300;
+    font-size: 20px;
+    color: #494949;
+}
+
+.load-more-books {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: 200;
+    cursor: pointer;
+    color: #d6d6d6;
+    margin-bottom: 25em;
+}
 
 /*FOOTER*/
 
@@ -300,3 +801,5 @@ p.copyright {
     color: #676767;
     padding-bottom: 3px;
 }
+
+

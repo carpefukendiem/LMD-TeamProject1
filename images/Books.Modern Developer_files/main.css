@@ -1,0 +1,393 @@
+/*Basic CSS Reset**/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: #fff;
+    max-width:1598px;
+    margin: 0 auto;
+    font-size: 12px;
+    font-family:"Roboto", "Helvetica", sans-serif;
+}
+
+
+.button {
+    border: 1px solid #eee;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.green-contour{
+    border-color: #9dc32b;
+    color: #9dc32b;
+}
+
+/*
+Header looks good at 100% screen size but goes cadiwampus when screen is resized. This will be taken care of when
+adjust for responsive design.
+ */
+
+/*HEADER*/
+header {
+    background-image: url('images/books_header_bg.jpg');
+    height: 100%;
+}
+
+.header-wrapper-content {
+    width: 675px;
+    margin: 0 auto;
+    padding: 3.5em 0;
+}
+
+/*Using Flexbox to stack header and subheader*/
+.header-text {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.header-logo {
+    padding-right: 1.5em;
+}
+
+.header-title {
+    letter-spacing: 0.01rem;
+    font-size: 2.2em;
+    color: rgba(255,255,255,.8);
+    font-weight: 200;
+    font-family: "Roboto Slab", "Helvetica", sans-serif;
+}
+
+.header-title>b {
+    font-weight:300;
+    color: white;
+}
+
+.header-subtitle {
+    color: #7c9913;
+    font-family:"Roboto", "Helvetica", sans-serif;
+    font-weight:400;
+    font-size:1rem;
+    margin-top: 3px;
+}
+
+/*SEARCH BAR*/
+.search-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/*Input Box reset*/
+input
+{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border: none;
+    color: #000;
+}
+
+input#search {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 50px;
+    margin-top:2em;
+    margin-bottom:2rem;
+    background-color: rgba(255,255,255,0.5);
+    font-weight: 300;
+    font-family:Roboto, sans-serif;
+    font-size:1.4em;
+    padding-left:0.7em;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #758e1a;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #758e1a;
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #758e1a;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    #758e1a;
+}
+
+/*Still need to build out hover and click (interaction) css.*/
+
+
+/*can't figure out how to align with search bar, any ideas Lena? */
+button.icon {
+    border: none;
+    background:#f5f5f5;
+    color: #B1CE4B;
+    height:50px;
+    width:70px;
+    margin-top: 2px;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+i[class*=fa-search]::before {
+    background:transparent;
+}
+
+/*NAVIGATION*/
+
+.main-nav-wrapper-content{
+    width: 960px;
+    margin: 0 auto;
+}
+
+.main-nav{
+    display:flex;
+    justify-content: space-between;
+    font-weight: 400;
+}
+
+.main-nav a {
+    text-decoration: none;
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size:1.4em;
+    color: #9e9e9e;
+    padding: 1em 0;
+    text-align: center;
+}
+
+
+a.active.item.green {
+    color: #9dc32b;
+}
+
+
+/*Mock Container Section*/
+.ui.container {
+    width:100%;
+    background-color: #f5f5f5;
+}
+
+.container a{
+    text-decoration: none;
+    color: #3183c9;
+}
+
+.container h3 {
+    font-size: 2.3em;
+    font-weight: 400;
+    color: #3c3c3c;
+    text-align: justify;
+}
+
+.main-content-wrapper{
+    width: 1150px;
+    margin: 0 auto;
+    padding: 3.5em 0;
+}
+
+.book-wrapper img{
+    width: 100%;
+}
+
+.book-wrapper{
+    width: 100%;
+    height: 450px;
+    background-color: #fff;
+    margin: 1em 0;
+    display: flex;
+    border-radius: 3px;
+}
+
+.book-text-wrapper {
+    padding: 2.7em;
+}
+
+.book-under-the-title{
+    font-weight: 300;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: flex-start;
+    padding: 1.2em 0 1em 0;
+    font-size: 1.1em;
+}
+
+.book-under-the-title > div {
+    padding-right: 2em;
+}
+
+.book-under-the-title > div > span:nth-child(2){
+    margin-left: 1em;
+}
+
+.book-under-the-title > div:not(:nth-child(1)){
+    color: #9e9e9e;
+}
+
+.book-text-sections {
+    padding: 2em 0;
+    display: flex;
+    font-size: 1.3em;
+    color: #3c3c3c;
+    line-height: 1.5em;
+    font-weight: 300;
+
+}
+
+.book-text-sections div p {
+    padding-bottom: 1em;
+}
+
+.book-text-sections .text-section-column-1 {
+    width: 55%;
+    height: 100%;
+    padding-right: 2em;
+    border-right: 1px solid #eee;
+}
+
+.book-text-sections .text-section-column-2 {
+    padding: 0 2em;
+}
+
+.text-section-column-2 > div {
+    width: 100%;
+    padding-top: 0.5em;
+    padding-bottom: 0.2em;
+    border-bottom: 1px solid #ede7e1;
+    color: #3183c9;
+}
+
+.img-book-bg {
+    width: 850px;
+
+}
+
+.img-book-bg.book-1{
+    background: url("images/book_1.png");
+    background-size: cover;
+    border-radius: 3px;
+}
+
+.img-book-bg.book-2 {
+    background: url("images/book_2.jpg");
+    background-size: cover;
+}
+
+.book-buttons-wrapper {
+    display:flex;
+    justify-content: space-between;
+    padding: 2em 0;
+}
+
+.left-buttons {
+    display:flex;
+    justify-content: flex-start;
+}
+
+.left-buttons > div {
+    margin-right: 2em;
+}
+
+.logo-book > div{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo-buy-book, .book-price {
+    box-sizing: border-box;
+    height: 43px;
+}
+
+.logo-buy-book {
+    width: 150px;
+    background: url("images/Gumroad_Wordmark_Full.jpg") #fff no-repeat center;
+    background-size: contain;
+    border-radius: 3px;
+}
+
+.gumroad-logo::before{
+    content: "";
+    border-top-left-radius: 3px;
+    background : linear-gradient(
+            to right,
+            #e8a023,
+            #e8a023 25px,
+            #e26952 25px,
+            #e26952 75px,
+            #c03648 75px,
+            #c03648 125px,
+            #8d2723 125px
+    );
+    height: 4px;
+    display: block;
+}
+
+.book-price {
+    background-color: #fff;
+    margin-left: -4px;
+    padding: 13px 15px;
+    font-size: 1.4em;
+    font-weight: 300;
+    color: #9dc32b;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: 1px solid #ede7e1;
+}
+
+/*FOOTER*/
+
+footer {
+    background-color: #3a3a3a;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1150px;
+    margin: 0 auto;
+    padding: 6em 0;
+}
+
+
+.footer.left-content b {
+    color: rgb(169, 169, 169);
+    font-weight: 400;
+}
+
+.footer.left-content{
+    font-family:"Roboto Slab", sans-serif;
+    font-size: 1.4em;
+    color: #676767;
+    display: flex;
+    align-items: center;
+}
+
+.footer.left-content p {
+    padding-left: 0.8em;
+}
+
+.footer.right-content {
+    font-size: 1.2em;
+    color:#A9A9A9;
+    font-family:Roboto,sans-serif;
+    text-align: right;
+}
+
+footer .email {
+    text-decoration: none;
+    color: rgb(169, 169, 169);
+}
+
+p.copyright {
+    color: #676767;
+    padding-bottom: 3px;
+}
