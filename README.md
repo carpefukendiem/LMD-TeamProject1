@@ -13,7 +13,7 @@ Team project 1 is to build out Books.Modern Developer UI based on a mockup provi
 
 [Link to Github Repo](https://github.com/carpefukendiem/LMD-TeamProject1)
 
-[Link to Demo site]()
+[Link to Demo site](https://carpefukendiem.github.io/LMD-TeamProject1/)
 
 We've decided to use github and QA.modern developer to communicate for this first project. The workload is split in the folowing way: 
 
